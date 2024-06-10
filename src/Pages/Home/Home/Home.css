@@ -1,0 +1,11 @@
+.centered {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 51%;
+  left: 50%;
+  z-index: -1;
+}
+.para {
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
