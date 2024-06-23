@@ -8,6 +8,8 @@ const Signup = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const from = location?.state?.from.pathname || '/';
+  // console.log(from);
+
   const handleSignup = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -15,13 +17,14 @@ const Signup = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     console.log(email, password);
-    createUser(email, password, name)
+    createUser(email, password)
       .then((result) => {
         const user = result.user;
-        update(photo, name).catch((err) => console.error(err));
-        console.log(user);
         setUser(user);
         navigate(from, { replace: true });
+        update(photo, name);
+        // .catch((err) => console.error(err));
+        console.log(user);
       })
       .catch((err) => console.error(err));
   };
@@ -51,7 +54,6 @@ const Signup = () => {
                 name='photo'
                 placeholder='Your Photo'
                 className='input input-bordered'
-                required
               />
             </div>
             <div className='form-control'>
