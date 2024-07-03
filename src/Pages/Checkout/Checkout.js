@@ -27,7 +27,7 @@ const Checkout = () => {
       phone,
       message,
     };
-    fetch(`https://elon-photography-server.onrender.com/orders`, {
+    fetch(`https://elon-photography-server.vercel.app/orders`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

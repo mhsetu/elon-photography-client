@@ -18,7 +18,7 @@ const Review = ({ p_id }) => {
       reviewer_image: user.photoURL,
     };
 
-    fetch(`https://elon-photography-server.onrender.com/reviews`, {
+    fetch(`https://elon-photography-server.vercel.app/reviews`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

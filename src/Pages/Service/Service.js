@@ -10,7 +10,7 @@ const Service = () => {
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch('https://elon-photography-server.onrender.com/reviews')
+    fetch('https://elon-photography-server.vercel.app/reviews')
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -24,7 +24,7 @@ const Service = () => {
     // console.log(id);
     const proceed = window.confirm('Are yo sure');
     if (proceed) {
-      fetch(`https://elon-photography-server.onrender.com/reviews/${id}`, {
+      fetch(`https://elon-photography-server.vercel.app/reviews/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())

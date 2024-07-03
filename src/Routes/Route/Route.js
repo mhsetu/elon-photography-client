@@ -19,19 +19,19 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         loader: () =>
-          fetch(`https://elon-photography-server.onrender.com/services/`),
+          fetch(`https://elon-photography-server.vercel.app/services/`),
       },
       {
         path: '/home',
         element: <Home></Home>,
         loader: () =>
-          fetch(`https://elon-photography-server.onrender.com/services/`),
+          fetch(`https://elon-photography-server.vercel.app/services/`),
       },
       {
         path: '/services',
         element: <Package></Package>,
         loader: () =>
-          fetch(`https://elon-photography-server.onrender.com/services/`),
+          fetch(`https://elon-photography-server.vercel.app/services/`),
       },
       {
         path: '/service/:id',
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://elon-photography-server.onrender.com/services/${params.id}`
+            `https://elon-photography-server.vercel.app/services/${params.id}`
           ),
       },
       {
@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () =>
-          fetch(`https://elon-photography-server.onrender.com/orders`),
+          fetch(`https://elon-photography-server.vercel.app/orders`),
       },
       {
         path: '/checkout/:id',
@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://elon-photography-server.onrender.com/services/${params.id}`
+            `https://elon-photography-server.vercel.app/services/${params.id}`
           ),
       },
       {

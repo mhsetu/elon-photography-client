@@ -7,7 +7,7 @@ const Orders = () => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`https://elon-photography-server.onrender.com/orders`)
+    fetch(`https://elon-photography-server.vercel.app/orders`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [order]);
@@ -16,7 +16,7 @@ const Orders = () => {
     // console.log(id);
     const proceed = window.confirm('Are yo sure');
     if (proceed) {
-      fetch(`https://elon-photography-server.onrender.com/orders/${id}`, {
+      fetch(`https://elon-photography-server.vercel.app/orders/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())
