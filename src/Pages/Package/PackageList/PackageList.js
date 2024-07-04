@@ -12,7 +12,7 @@ const PackageList = ({ service }) => {
 
   return (
     <PhotoProvider>
-      <div className='card card-compact w-96 bg-base-100 shadow-xl mb-5'>
+      <div className='card card-compact lg:w-96 w-80 bg-base-100 shadow-xl mb-5'>
         <PhotoView src={image}>
           <figure>
             <img className='max-h-200px' src={image} alt='Shoes' />

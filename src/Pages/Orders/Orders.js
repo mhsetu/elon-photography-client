@@ -46,8 +46,8 @@ const Orders = () => {
   // console.log(order);
   return (
     <div>
-      <div className='overflow-x-auto'>
-        <table className='table'>
+      <div className='overflow-x-auto min-h-[600px]'>
+        <table className='table table-xm '>
           {/* head */}
           <thead>
             <tr>

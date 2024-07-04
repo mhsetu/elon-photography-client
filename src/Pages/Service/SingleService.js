@@ -21,12 +21,20 @@ const SingleService = ({ rview, handleDelete }) => {
       />
       <div className='chat chat-start'>
         <div className='chat-image avatar'>
-          <div className='w-10 rounded-full'>
-            <img
-              alt='Tailwind CSS chat bubble component'
-              src={reviewer_image}
-            />
-          </div>
+          {reviewer_image ? (
+            <div className='w-10 rounded-full'>
+              <img
+                alt='Tailwind CSS chat bubble component'
+                src={reviewer_image}
+              />
+            </div>
+          ) : (
+            <div className='avatar placeholder'>
+              <div className='bg-neutral text-neutral-content rounded-full w-10'>
+                <span>{reviewer_name?.slice(0, 1).toUpperCase()}</span>
+              </div>
+            </div>
+          )}
         </div>
         <div className='chat-header'>{reviewer_name}</div>
         <div className='flex'>

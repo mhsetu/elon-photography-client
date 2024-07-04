@@ -25,9 +25,9 @@ const Login = () => {
       .catch((err) => console.error(err));
   };
   return (
-    <div className='hero min-h-screen bg-base-200'>
+    <div className='lg:hero lg:min-h-screen md:hero md:min-h-screen bg-base-200'>
       <div className='hero-content flex-row'>
-        <div className='card shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
+        <div className='card shrink-0 w-full lg:max-w-sm md:max-w-sm shadow-2xl bg-base-100'>
           <form onSubmit={handleLogin} className='card-body'>
             <div className='form-control'>
               <label className='label'>
@@ -59,7 +59,7 @@ const Login = () => {
             <SocialLogin></SocialLogin>
           </form>
         </div>
-        <div className='text-center lg:text-left'>
+        <div className='text-center lg:text-left hidden lg:block'>
           <h1 className='text-5xl font-bold'>Login now!</h1>
           <p className='py-6'>
             A photograph is a bridge between reality and the imagination,

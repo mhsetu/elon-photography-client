@@ -56,15 +56,23 @@ const Review = ({ p_id }) => {
         reverseOrder={false}
       />
       <form
-        className='font-semibold flex place-items-center'
+        className='font-semibold flex place-items-center mb-8'
         onSubmit={handleSubmit}
       >
         <div className='chat-image avatar mr-2 mb-1'>
           <div className='w-10 rounded-full'>
-            <img
-              alt='Tailwind CSS chat bubble component'
-              src={user?.photoURL}
-            />
+            {user?.photoURL ? (
+              <img
+                alt='Tailwind CSS chat bubble component'
+                src={user?.photoURL}
+              />
+            ) : (
+              <div className='avatar placeholder'>
+                <div className='bg-neutral text-neutral-content rounded-full w-10'>
+                  <span>{user?.displayName?.slice(0, 1).toUpperCase()}</span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <input

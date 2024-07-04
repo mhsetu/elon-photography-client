@@ -8,7 +8,7 @@ const Services = () => {
     <div className='mx-8 my-8'>
       <h1 className='text-5xl my-5'>Services</h1>
       {/* <p>services :{services.length}</p> */}
-      <div className='grid grid-cols-3 gap-4 mx-8 my-8 justify-items-center'>
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-8 my-8 justify-items-center'>
         {services.slice(0, 3).map((service) => (
           <ServiceList key={service._id} service={service}></ServiceList>
         ))}

@@ -55,27 +55,33 @@ const Service = () => {
     <div>
       <div className='mx-10 my-10'>
         {/* <h1>Service</h1> */}
-        <div className=' flex gap-5 bg-[#edede9] shadow-xl  rounded-md '>
-          <img className='w-3/5 rounded-md' src={image} alt='Album' />
-          <div className='mt-10'>
-            <h2 className='text-4xl text-left'>{name}</h2>
-            <p className='text-left mt-5 text-xl'>{short_description}</p>
-            <p className='text-left mt-5 text-xl'>
-              {' '}
-              <span className='font-semibold'>Price:</span> {price}
-            </p>
-            <div className='absolute'>
-              <Link to={`/checkout/${_id}`}>
-                <button className='btn btn-outline mt-5'>Book Now</button>
-              </Link>
+        <div className=' lg:flex gap-5 bg-[#edede9] shadow-xl  rounded-md '>
+          <img className='lg:w-3/5 rounded-md' src={image} alt='Album' />
+          <div className='lg:mt-10 mt-3 card-body'>
+            <div>
+              <h2 className='lg:text-4xl text-xl font-semibold text-left'>
+                {name}
+              </h2>
+              <p className='text-left lg:mt-5 mt-2 lg:text-xl'>
+                {short_description}
+              </p>
+              <p className='text-left lg:mt-5 mt-2 lg:text-xl'>
+                {' '}
+                <span className='font-semibold'>Price:</span> {price}
+              </p>
+              <div className=' card-actions justify-start'>
+                <Link to={`/checkout/${_id}`}>
+                  <button className='btn btn-outline mt-5'>Book Now</button>
+                </Link>
+              </div>
             </div>
-            <div className='absolute  bottom-0'>
+            <div className='mt-20'>
               {/* <h3 className='text-2xl text-left'>Feel Free to write</h3> */}
               <Review p_id={_id}></Review>
             </div>
           </div>
         </div>
-        <h1 className='text-4xl mt-10 mb-5 text-left'>
+        <h1 className='text-4xl mt-10 mb-5 lg:text-left md:text-left text-center'>
           Reviews From Customers
         </h1>
         <div>
